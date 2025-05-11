@@ -18,7 +18,7 @@ echo "open the script to understand how it operates"
 add_numbers 5 5
 
 # Keynote: 
-# 1) In line 5 and 6, $1, $2 are parameter notations. We are introducing parameters inside the function
+# 1) Notice $1, $2 are parameter notations. We are introducing parameters inside the function
 # 2) In function call, specify the name of the user-defined function along with the parameters
 # 3) Follow this syntax format, user-defined-function-name argument-1 argument-2
 
