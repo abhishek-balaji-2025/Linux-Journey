@@ -1,0 +1,37 @@
+# Author: Abhishek Balaji
+# Date of creation: 23-05-2025 / 15:15 PM
+
+# awk is a powerful pattern-searching tool that also helps transform and manipulate data on Linux-based systems.
+
+# What functions does awk perform?
+
+# awk scans each line of a file, looks for patterns, and when a match is found, executes actions such as printing fields, modifying text, or performing calculations.
+# Note: Make sure to specify the awk actions within '{  }'
+
+# awk command-1 -> awk '{print}' <file-name> - This awk command is used to display the entire content present in the file
+awk '{print}' sample_data.csv
+
+# awk command-2 -> awk '{print $0}' <file-name> - This awk command is used to display the entire content present in the file. Similar to awk '{print}' sample_data.csv command
+awk '{print $0}' sample_data.csv
+
+# awk command-3 -> awk '/pattern/{print}' <file-name> - This command is used to print out list by pattern matching
+awk '/nginx/{print}' sample_data.csv
+
+# awk command-4 -> awk '{print NR, $0}' <file-name> - This awk command is used to include numbers to all the records present in the file
+awk '{print NR, $0}' sample_data.csv
+
+# awk command-5 -> awk '{print NF, $0}' <file-name> - This awk command is used to number out the columns present in each and every row
+awk '{print NF, $0}' sample_data.csv
+
+# awk command-6 -> awk 'BEGIN{ORS="\n\n}{print $0}' <file-name> - This awk command is used to format the output by providing a new line after each record
+# ORS -> Output record seperator
+awk 'BEGIN{ORS="\n\n"}{print $0}' sample_data.csv
+
+# awk command-7 -> awk 'BEGIN{OFS="---"}{print $1, $2}' <file-name> - This awk command is used to print the first and second column with a field seperator in between
+# Note - OFS -> Output field seperator
+awk 'BEGIN{OFS="--*--"}{print $1, $2, $3}' sample_data.csv
+
+# Note: Instead of typing the awk commands frequently. Create a file and store the commands in it.
+# Use this command, awk -f <awk-file-name> <data-filename>
+awk -f awk-command-4 sample_data.csv
+
