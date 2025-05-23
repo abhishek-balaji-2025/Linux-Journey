@@ -1,0 +1,24 @@
+# When a user creates a cron file, it will be stored in /var/spool/cron
+# When the system process creates a cron file, it will be stored in /etc/cron.d
+
+# cron-job structure
+
+* * * * * 
+| | | | |_______ day of the week (0-6)
+| | | |_________ month (1-12)
+| | |___________ day of the month (0-31)
+| |_____________ hour (0-23)
+|_______________ minute (0-59)
+
+# create a bash script and enter the commands that needs to be automated; touch <bash-script-name.bash>
+# Provide executable permissions using sudo chmod 700 "bash-script-name"
+# To make changes use the command, nano <bash-script-name.bash>
+# Enter the command crontab -e to open cron tab
+
+Note: Always use absolute paths to scripts and commands inside your cron jobs
+
+I have created a bash script named create_dummy_file.bash. Provide execution permission if not done yet.
+Enter the command crontab -e
+
+Mention the time, date, & interval for this cron job to perform; Include the entire path of the bash script (Based on your local machine)
+
