@@ -1,0 +1,3 @@
+# Note: No need to specify the single inverted commas, just the action within { }
+{print NR, $0}
+
